@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ff80b5">
+<title>Welcome to Your Book ♡</title>
+<style>
+:root{--pink:#ff80b5;--pink2:#ffd4e7;--blue:#a9dfff;--blue2:#e4f5ff;--ink:#65445d;--white:#fffafd;--shadow:0 12px 35px #d87ba52b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"Trebuchet MS",system-ui,sans-serif;color:var(--ink);background:linear-gradient(135deg,#fff0f7,#eaf8ff 55%,#fff4fb);min-height:100vh;overflow-x:hidden}button,input,textarea,select{font:inherit}button{cursor:pointer;border:0}
+.petal{position:fixed;z-index:-1;opacity:.55;font-size:25px;animation:float 7s ease-in-out infinite;pointer-events:none}.p1{top:12%;left:5%}.p2{top:38%;right:6%;animation-delay:1s}.p3{bottom:10%;left:9%;animation-delay:2s}.p4{top:70%;right:15%;animation-delay:3s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-18px) rotate(12deg)}}
+.hero{min-height:92vh;display:grid;place-items:center;padding:28px 18px;position:relative}.hero-card{max-width:1050px;width:100%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:25px;background:#ffffffb8;border:2px solid #fff;border-radius:35px;padding:clamp(22px,5vw,55px);box-shadow:var(--shadow);backdrop-filter:blur(12px)}
+.eyebrow{display:inline-block;background:var(--blue2);border:1px solid #c8eaff;padding:8px 14px;border-radius:99px;font-size:.8rem;font-weight:800;letter-spacing:.04em;color:#4784a5}.hero h1{font-size:clamp(2.5rem,6vw,4.6rem);line-height:1.03;margin:18px 0 14px;letter-spacing:-.05em;color:#e95e9b}.hero h1 span{color:#6caed7}.hero p{line-height:1.7;font-size:1.05rem;max-width:420px}.primary{background:linear-gradient(110deg,#ff78ad,#ff9ac7);color:white;border-radius:16px;padding:14px 22px;font-weight:800;box-shadow:0 8px 18px #f58ab54a;transition:.2s}.primary:hover{transform:translateY(-2px);filter:saturate(1.1)}.hero-art{min-height:350px;display:grid;place-items:center;position:relative}.book{width:220px;height:275px;background:linear-gradient(145deg,#ffadd0,#ff79b4);border:7px solid #fff;border-radius:18px 28px 28px 18px;box-shadow:15px 17px 0 #9ed9f3,0 25px 40px #ba71934a;transform:rotate(-8deg);animation:bookbounce 4s ease-in-out infinite;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:white}.book:before{content:"";position:absolute;left:15px;top:0;bottom:0;width:7px;background:#fff8;border-radius:5px}.book:after{content:"";position:absolute;bottom:-13px;left:13px;right:8px;height:13px;background:repeating-linear-gradient(#fff,#fff 2px,#ffd7e7 3px);border-radius:0 0 8px 8px}.book-inner{padding:20px}.book-inner .big{font-size:4rem;display:block}.book-inner b{font-size:1.35rem;line-height:1.2;display:block}.book-inner small{display:block;margin-top:12px;letter-spacing:.1em}
+@keyframes bookbounce{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-13px) rotate(-3deg)}}
+.girl{position:absolute;bottom:12px;right:2%;width:135px;height:190px;animation:gently 3s ease-in-out infinite}.hijab{position:absolute;top:0;left:14px;width:105px;height:118px;border-radius:55% 55% 48% 48%;background:#8ecdf0;border:5px solid #fff;box-shadow:0 5px 0 #6eadd1}.face{position:absolute;top:23px;left:38px;width:58px;height:69px;background:#f6c6a7;border-radius:48% 48% 45% 45%;z-index:1}.face:before{content:"•  •";white-space:pre;position:absolute;top:28px;left:12px;font-size:13px;color:#694c4a;letter-spacing:8px}.face:after{content:"⌣";position:absolute;top:39px;left:22px;font-size:18px;color:#bd6e79}.body{position:absolute;bottom:0;left:19px;width:100px;height:91px;border-radius:38px 38px 15px 15px;background:#ff8cbd;border:5px solid white}.body:before{content:"♡";position:absolute;top:25px;left:35px;font-size:27px;color:white}.arm{position:absolute;top:109px;left:6px;width:48px;height:17px;border-radius:20px;background:#f6c6a7;transform:rotate(-28deg);z-index:2}@keyframes gently{50%{transform:translateY(-7px) rotate(2deg)}}
+.hero-stickers{position:absolute;font-size:2rem}.s1{top:15%;right:12%}.s2{top:25%;left:8%}.s3{bottom:12%;left:10%}
+main{max-width:1150px;margin:auto;padding:0 18px 60px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:10px 0 22px}.brand{font-weight:900;font-size:1.3rem;color:#e95e9b}.brand span{color:#6caed7}.date-pill{background:#fff;border:1px solid #f6d8e6;border-radius:99px;padding:10px 14px;font-size:.88rem}
+.dashboard{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:25px}.stat{background:#fff;border:1px solid #fff;border-radius:22px;padding:18px;box-shadow:var(--shadow)}.stat small{display:block;color:#a17d98;font-weight:700}.stat strong{font-size:1.8rem;color:#e95e9b}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}.tab{padding:12px 17px;border-radius:14px;background:#ffffffb8;border:1px solid #f3d8e7;color:#986c89;font-weight:800}.tab.active{background:var(--pink);color:white;border-color:var(--pink);box-shadow:0 7px 15px #ff80b533}
+.panel{display:none;background:#ffffffd9;border:1px solid white;border-radius:27px;padding:clamp(18px,3vw,30px);box-shadow:var(--shadow)}.panel.active{display:block}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}.panel h2{margin:0;color:#df6098}.panel-sub{margin:6px 0 0;color:#9d7e94}.form-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr auto;gap:10px;margin:18px 0}input,textarea,select{width:100%;padding:13px 14px;border:1.5px solid #f2d7e6;background:#fffafd;border-radius:13px;color:var(--ink);outline:none}input:focus,textarea:focus,select:focus{border-color:#8ccdf0;box-shadow:0 0 0 3px #a9dfff40}textarea{resize:vertical;min-height:150px;line-height:1.6}.secondary{background:var(--blue2);color:#477f9e;padding:11px 15px;border-radius:13px;font-weight:800}.soft{background:#fff0f7;color:#d85d95;padding:9px 12px;border-radius:11px;font-weight:800}.task-list{display:grid;gap:10px}.task{display:flex;align-items:center;gap:12px;background:#fffafd;border:1px solid #f6dfeb;padding:14px;border-radius:17px}.task input[type=checkbox]{width:20px;height:20px;accent-color:#ed78ac;flex:0 0 auto}.task-content{flex:1;min-width:0}.task-title{font-weight:800;overflow-wrap:anywhere}.task-meta{font-size:.8rem;color:#a1859a;margin-top:5px}.task.done .task-title{text-decoration:line-through;color:#b5a4b1}.task.done{opacity:.7}.task-actions{display:flex;gap:6px}.icon-btn{background:#f0f8ff;color:#5e98b8;border-radius:10px;padding:8px 10px}.empty{text-align:center;padding:35px 12px;color:#ad8ba3}.empty span{font-size:2.5rem;display:block;margin-bottom:8px}.note-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px}.note-editor,.note-list-wrap{background:#fffafd;border:1px solid #f6dfeb;border-radius:20px;padding:18px}.note-editor label{display:block;font-size:.88rem;font-weight:800;margin:12px 0 6px}.note-editor .primary{margin-top:12px}.note-list{display:grid;gap:10px;max-height:490px;overflow:auto}.note-card{padding:14px;border-radius:15px;background:#fff;border:1px solid #f5dfea}.note-card h3{margin:0 0 6px;font-size:1rem;color:#dc6198;overflow-wrap:anywhere}.note-card p{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.55}.note-card small{display:block;color:#ad8ba3;margin:8px 0}.note-actions{display:flex;gap:7px;margin-top:10px}.wishlist-form{display:grid;grid-template-columns:1.5fr 1fr 1fr auto;gap:10px;margin:18px 0}.wish-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.wish{background:linear-gradient(135deg,#fff6fb,#eef9ff);border:1px solid #f3ddeb;border-radius:18px;padding:16px;display:flex;gap:12px;align-items:flex-start}.wish .heart{font-size:1.6rem}.wish-content{flex:1;min-width:0}.wish h3{margin:0 0 5px;overflow-wrap:anywhere}.wish p{margin:0;font-size:.86rem;color:#9e7e95;overflow-wrap:anywhere}.wish .wish-actions{display:flex;gap:6px;margin-top:10px}.wish.done{opacity:.65}.wish.done h3{text-decoration:line-through}.toolbar{display:flex;gap:8px;flex-wrap:wrap}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:#67485f;color:white;padding:12px 18px;border-radius:14px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.25s;z-index:10;max-width:90%;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}footer{text-align:center;padding:30px 10px 0;color:#ad8ba3;font-size:.85rem}
+@media(max-width:760px){.hero-card{grid-template-columns:1fr;text-align:center}.hero p{margin-left:auto;margin-right:auto}.hero-art{min-height:300px}.book{width:185px;height:235px}.girl{transform:scale(.8);right:0;bottom:0}.hero{min-height:auto;padding:20px 14px 45px}.dashboard{grid-template-columns:repeat(3,1fr);gap:8px}.stat{padding:13px 10px}.stat strong{font-size:1.45rem}.stat small{font-size:.75rem}.form-grid,.wishlist-form{grid-template-columns:1fr 1fr}.form-grid input:first-child,.wishlist-form input:first-child{grid-column:1/-1}.form-grid button,.wishlist-form button{grid-column:1/-1}.note-layout{grid-template-columns:1fr}.wish-list{grid-template-columns:1fr}.topbar{align-items:flex-start}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="petal p1">♡</div><div class="petal p2">✿</div><div class="petal p3">✧</div><div class="petal p4">♡</div>
+<section class="hero" id="welcome">
+  <div class="hero-card">
+    <div>
+      <span class="eyebrow">✦ YOUR LITTLE HAPPY SPACE ✦</span>
+      <h1>Welcome to<br><span>Your Book</span> ♡</h1>
+      <p>Tempat kecil untuk merapikan hari-harimu, menulis cerita, menyimpan impian, dan merayakan setiap langkah kecilmu. Pelan-pelan, kamu pasti bisa! 🌷</p>
+      <button class="primary" onclick="openApp()">Buka buku harian ✨ →</button>
+    </div>
+    <div class="hero-art" aria-label="Ilustrasi buku pink dan perempuan berhijab">
+      <span class="hero-stickers s1">✦</span><span class="hero-stickers s2">♡</span><span class="hero-stickers s3">🌸</span>
+      <div class="book"><div class="book-inner"><span class="big">📖</span><b>My Little<br>Happy Book</b><small>PLANS · DREAMS · YOU</small></div></div>
+      <div class="girl"><div class="hijab"></div><div class="face"></div><div class="body"></div><div class="arm"></div></div>
+    </div>
+  </div>
+</section>
+<main id="app" hidden>
+  <div class="topbar"><div class="brand">📚 Your <span>Book</span> ♡</div><div class="date-pill" id="todayLabel"></div></div>
+  <section class="dashboard">
+    <div class="stat"><small>☁️ To-do selesai</small><strong id="taskStat">0/0</strong></div>
+    <div class="stat"><small>💗 Wishlist</small><strong id="wishStat">0</strong></div>
+    <div class="stat"><small>📔 Catatan tersimpan</small><strong id="noteStat">0</strong></div>
+  </section>
+  <nav class="tabs" aria-label="Menu buku">
+    <button class="tab active" data-tab="todo">☑️ To-do list</button>
+    <button class="tab" data-tab="notes">📔 Catatan harian</button>
+    <button class="tab" data-tab="wishlist">🌟 Wishlist</button>
+    <button class="tab" data-tab="backup">🎀 Simpan & ekspor</button>
+  </nav>
+  <section class="panel active" id="todo">
+    <div class="panel-head"><div><h2>Rencana hari ini 🌷</h2><p class="panel-sub">Satu langkah kecil juga tetap sebuah kemajuan.</p></div><button class="soft" onclick="clearCompleted()">Bersihkan yang selesai</button></div>
+    <form class="form-grid" id="taskForm"><input id="taskTitle" placeholder="Apa yang ingin kamu lakukan?" maxlength="160" required aria-label="Nama kegiatan"><input id="taskDate" type="date" aria-label="Tanggal kegiatan"><select id="taskPriority" aria-label="Prioritas"><option value="Biasa">♡ Biasa</option><option value="Penting">💗 Penting</option><option value="Santai">☁️ Santai</option></select><button class="primary" type="submit">+ Tambah</button></form>
+    <div class="toolbar" style="margin-bottom:14px"><select id="taskFilter" style="max-width:210px" aria-label="Filter tugas"><option value="all">Semua kegiatan</option><option value="active">Belum selesai</option><option value="done">Sudah selesai</option></select></div>
+    <div class="task-list" id="taskList"></div>
+  </section>
+  <section class="panel" id="notes">
+    <div class="panel-head"><div><h2>Dear Diary... 💌</h2><p class="panel-sub">Tulis cerita, perasaan, atau hal kecil yang kamu syukuri.</p></div></div>
+    <div class="note-layout">
+      <form class="note-editor" id="noteForm"><input type="hidden" id="noteId"><label for="noteTitle">Judul catatan</label><input id="noteTitle" placeholder="Hari yang menyenangkan..." maxlength="120" required><label for="noteDate">Tanggal</label><input id="noteDate" type="date" required><label for="noteMood">Suasana hati</label><select id="noteMood"><option>🥰 Bahagia</option><option>🌷 Tenang</option><option>☁️ Biasa saja</option><option>🥺 Sedih</option><option>⚡ Semangat</option><option>🌈 Bersyukur</option></select><label for="noteBody">Ceritamu</label><textarea id="noteBody" placeholder="Hari ini aku merasa...&#10;&#10;Hal yang ingin kuingat..." required></textarea><button class="primary" type="submit" id="noteSave">Simpan catatan ♡</button> <button class="secondary" type="button" onclick="resetNote()">Bersihkan</button></form>
+      <div class="note-list-wrap"><h3 style="margin-top:0">Halaman kenangan ✨</h3><div class="note-list" id="noteList"></div></div>
+    </div>
+  </section>
+  <section class="panel" id="wishlist">
+    <div class="panel-head"><div><h2>Little dreams, big wishes ⭐</h2><p class="panel-sub">Simpan hal yang ingin kamu coba, capai, atau miliki.</p></div></div>
+    <form class="wishlist-form" id="wishForm"><input id="wishTitle" placeholder="Impian atau keinginanmu..." maxlength="160" required><input id="wishTarget" type="date" aria-label="Target tanggal (opsional)"><select id="wishCategory" aria-label="Kategori wishlist"><option>🌸 Pengalaman</option><option>📚 Belajar</option><option>🎁 Barang</option><option>✈️ Jalan-jalan</option><option>💗 Pribadi</option></select><button class="primary" type="submit">+ Simpan</button></form>
+    <div class="wish-list" id="wishList"></div>
+  </section>
+  <section class="panel" id="backup">
+    <div class="panel-head"><div><h2>Data kecilmu, tetap aman 💾</h2><p class="panel-sub">Ekspor data untuk cadangan atau dibagikan ke aplikasi lain.</p></div></div>
+    <div class="note-editor">
+      <h3>📦 Ekspor dan impor data</h3>
+      <p style="line-height:1.7">Data disimpan otomatis di browser/perangkat ini. Unduh cadangan JSON agar bisa dipindahkan, atau ekspor catatan ke format CSV yang bisa dibuka di spreadsheet.</p>
+      <div class="toolbar"><button class="primary" onclick="exportJSON()">⬇ Ekspor semua data (JSON)</button><button class="secondary" onclick="exportCSV()">⬇ Ekspor data tabel (CSV)</button><button class="secondary" onclick="exportNotesText()">📝 Ekspor catatan (.txt)</button></div>
+      <label for="importFile">Pulihkan dari file JSON cadangan</label><input type="file" id="importFile" accept=".json,application/json"><button class="secondary" style="margin-top:10px" onclick="importJSON()">⬆ Impor cadangan</button>
+      <hr style="border:0;border-top:1px solid #f2d7e6;margin:24px 0">
+      <h3>📤 Bagikan catatan dengan cepat</h3><p style="line-height:1.7">Pilih catatan harian, lalu gunakan tombol salin atau bagikan dari kartu catatan. Jika fitur berbagi tidak didukung browser, teks bisa disalin dan ditempel ke WhatsApp, email, atau aplikasi lain.</p>
+      <p style="font-size:.88rem;color:#a17d98">Catatan: penyimpanan lokal bukan sinkronisasi cloud. Data browser dapat hilang jika data situs dihapus atau kamu berpindah perangkat. Ekspor cadangan secara berkala ya ♡</p>
+      <button class="soft" onclick="if(confirm('Hapus semua data Your Book dari browser ini? Pastikan sudah mengekspor cadangan jika diperlukan.')){state={tasks:[],notes:[],wishes:[]};save();renderAll();showToast('Semua data lokal sudah dihapus.')}">Hapus semua data lokal</button>
+    </div>
+  </section>
+  <footer>Made with ♡ for your everyday little dreams · Your Book</footer>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+const KEY='yourBookData_v1';
+const $=id=>document.getElementById(id);
+const today=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+let state={tasks:[],notes:[],wishes:[]};
+try{const saved=JSON.parse(localStorage.getItem(KEY)||'null');if(saved&&typeof saved==='object')state={tasks:Array.isArray(saved.tasks)?saved.tasks:[],notes:Array.isArray(saved.notes)?saved.notes:[],wishes:Array.isArray(saved.wishes)?saved.wishes:[]}}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){showToast('Penyimpanan browser penuh. Ekspor data untuk cadangan ya.')}} 
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,8)}
+function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function niceDate(s){if(!s)return 'Tanpa tanggal';const d=new Date(s+'T12:00:00');return isNaN(d)?s:d.toLocaleDateString('id-ID',{day:'numeric',month:'short',year:'numeric'})}
+function showToast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>t.classList.remove('show'),2600)}
+function openApp(){$('app').hidden=false;$('todayLabel').textContent='📅 '+new Date().toLocaleDateString('id-ID',{weekday:'long',day:'numeric',month:'long',year:'numeric'});$('app').scrollIntoView({behavior:'smooth'});renderAll()}
+document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b===btn));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===btn.dataset.tab))}));
+$('taskDate').value=today();$('noteDate').value=today();
+$('taskForm').addEventListener('submit',e=>{e.preventDefault();state.tasks.unshift({id:uid(),title:$('taskTitle').value.trim(),date:$('taskDate').value,priority:$('taskPriority').value,done:false,created:new Date().toISOString()});save();$('taskTitle').value='';renderAll();showToast('Kegiatan baru ditambahkan! 🌷')});
+$('taskFilter').addEventListener('change',renderTasks);
+function renderTasks(){let arr=state.tasks.filter(t=>$('taskFilter').value==='all'||($('taskFilter').value==='done'?t.done:!t.done));$('taskList').innerHTML=arr.length?arr.map(t=>`<div class="task ${t.done?'done':''}"><input type="checkbox" ${t.done?'checked':''} aria-label="Tandai selesai" onchange="toggleTask('${t.id}')"><div class="task-content"><div class="task-title">${esc(t.title)}</div><div class="task-meta">📅 ${niceDate(t.date)} · ${esc(t.priority)}${t.done?' · Selesai ✓':''}</div></div><div class="task-actions"><button class="icon-btn" title="Hapus kegiatan" aria-label="Hapus kegiatan" onclick="deleteTask('${t.id}')">🗑️</button></div></div>`).join(''):'<div class="empty"><span>🧸</span>Belum ada kegiatan di sini.<br>Yuk, tulis satu hal kecil yang ingin kamu lakukan!</div>'}
+function toggleTask(id){const t=state.tasks.find(x=>x.id===id);if(t)t.done=!t.done;save();renderAll()}
+function deleteTask(id){state.tasks=state.tasks.filter(t=>t.id!==id);save();renderAll();showToast('Kegiatan dihapus')}
+function clearCompleted(){const n=state.tasks.filter(t=>t.done).length;state.tasks=state.tasks.filter(t=>!t.done);save();renderAll();showToast(n?`${n} kegiatan selesai dibersihkan`:'Belum ada kegiatan selesai')}
+$('noteForm').addEventListener('submit',e=>{e.preventDefault();const id=$('noteId').value;const item={id:id||uid(),title:$('noteTitle').value.trim(),date:$('noteDate').value||today(),mood:$('noteMood').value,body:$('noteBody').value.trim(),updated:new Date().toISOString()};if(id){const i=state.notes.findIndex(n=>n.id===id);if(i>=0)state.notes[i]=item;else state.notes.unshift(item)}else state.notes.unshift(item);save();resetNote();renderAll();showToast('Catatanmu tersimpan 💌')});
+function resetNote(){$('noteForm').reset();$('noteId').value='';$('noteDate').value=today();$('noteSave').textContent='Simpan catatan ♡'}
+function editNote(id){const n=state.notes.find(x=>x.id===id);if(!n)return;$('noteId').value=n.id;$('noteTitle').value=n.title;$('noteDate').value=n.date;$('noteMood').value=n.mood;$('noteBody').value=n.body;$('noteSave').textContent='Perbarui catatan ♡';$('noteForm').scrollIntoView({behavior:'smooth',block:'start'})}
+function deleteNote(id){if(confirm('Hapus catatan ini?')){state.notes=state.notes.filter(n=>n.id!==id);save();renderAll();showToast('Catatan dihapus')}}
+async function shareNote(id){const n=state.notes.find(x=>x.id===id);if(!n)return;const text=`${n.title}\n${n.date} · ${n.mood}\n\n${n.body}`;try{if(navigator.share){await navigator.share({title:n.title,text})}else if(navigator.clipboard){await navigator.clipboard.writeText(text);showToast('Catatan disalin! Tempel ke aplikasi pilihanmu ♡')}else{downloadFile(n.title.replace(/[^\w-]/g,'_')+'.txt',text,'text/plain;charset=utf-8')}}catch(e){if(e.name!=='AbortError')showToast('Tidak bisa membuka menu berbagi di perangkat ini.')}}
+function renderNotes(){$('noteList').innerHTML=state.notes.length?state.notes.map(n=>`<article class="note-card"><h3>${esc(n.title)}</h3><small>${niceDate(n.date)} · ${esc(n.mood)}</small><p>${esc(n.body)}</p><div class="note-actions"><button class="soft" onclick="editNote('${n.id}')">✏️ Edit</button><button class="secondary" onclick="shareNote('${n.id}')">↗ Bagikan</button><button class="icon-btn" onclick="deleteNote('${n.id}')" aria-label="Hapus catatan">🗑️</button></div></article>`).join(''):'<div class="empty"><span>📔</span>Halamanmu masih kosong.<br>Mulai tulis cerita hari ini!</div>'}
+$('wishForm').addEventListener('submit',e=>{e.preventDefault();state.wishes.unshift({id:uid(),title:$('wishTitle').value.trim(),target:$('wishTarget').value,category:$('wishCategory').value,done:false,created:new Date().toISOString()});save();$('wishTitle').value='';$('wishTarget').value='';renderAll();showToast('Satu impian tersimpan ⭐')});
+function toggleWish(id){const w=state.wishes.find(x=>x.id===id);if(w)w.done=!w.done;save();renderAll()}
+function deleteWish(id){state.wishes=state.wishes.filter(x=>x.id!==id);save();renderAll();showToast('Wishlist dihapus')}
+function renderWishes(){$('wishList').innerHTML=state.wishes.length?state.wishes.map(w=>`<article class="wish ${w.done?'done':''}"><span class="heart">${w.done?'💖':'🌟'}</span><div class="wish-content"><h3>${esc(w.title)}</h3><p>${esc(w.category)}${w.target?' · Target: '+niceDate(w.target):''}</p><div class="wish-actions"><button class="soft" onclick="toggleWish('${w.id}')">${w.done?'↩ Belum tercapai':'✓ Tercapai!'}</button><button class="icon-btn" onclick="deleteWish('${w.id}')" aria-label="Hapus wishlist">🗑️</button></div></div></article>`).join(''):'<div class="empty" style="grid-column:1/-1"><span>🌠</span>Impian apa yang ingin kamu wujudkan?<br>Simpan di sini supaya tidak terlupakan.</div>'}
+function renderAll(){renderTasks();renderNotes();renderWishes();$('taskStat').textContent=state.tasks.filter(t=>t.done).length+'/'+state.tasks.length;$('wishStat').textContent=state.wishes.filter(w=>!w.done).length;$('noteStat').textContent=state.notes.length}
+function downloadFile(name,content,type){const blob=new Blob([content],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function exportJSON(){downloadFile('your-book-backup-'+today()+'.json',JSON.stringify({...state,exportedAt:new Date().toISOString(),app:'Your Book'},null,2),'application/json');showToast('Cadangan JSON siap diunduh 💾')}
+function csvCell(v){return '"'+String(v??'').replace(/"/g,'""')+'"'}
+function exportCSV(){const rows=[['Jenis','Judul','Tanggal','Status/Prioritas/Mood','Kategori/Isi']];state.tasks.forEach(t=>rows.push(['To-do',t.title,t.date,t.done?'Selesai':'Belum selesai',t.priority]));state.wishes.forEach(w=>rows.push(['Wishlist',w.title,w.target,w.done?'Tercapai':'Belum tercapai',w.category]));state.notes.forEach(n=>rows.push(['Catatan harian',n.title,n.date,n.mood,n.body]));downloadFile('your-book-data-'+today()+'.csv','\ufeff'+rows.map(r=>r.map(csvCell).join(',')).join('\r\n'),'text/csv;charset=utf-8');showToast('File CSV siap diunduh')}
+function exportNotesText(){const content=state.notes.map(n=>`${n.title}\n${niceDate(n.date)} · ${n.mood}\n\n${n.body}\n\n${'─'.repeat(32)}\n`).join('\n')||'Belum ada catatan.';downloadFile('catatan-harian-'+today()+'.txt',content,'text/plain;charset=utf-8');showToast('Catatan TXT siap diunduh')}
+async function importJSON(){const file=$('importFile').files[0];if(!file){showToast('Pilih file JSON cadangan dulu ya');return}try{const data=JSON.parse(await file.text());if(!data||!Array.isArray(data.tasks)||!Array.isArray(data.notes)||!Array.isArray(data.wishes))throw new Error('format');if(!confirm('Impor akan mengganti data saat ini. Lanjutkan?'))return;state={tasks:data.tasks,notes:data.notes,wishes:data.wishes};save();renderAll();$('importFile').value='';showToast('Cadangan berhasil dipulihkan ♡')}catch(e){showToast('File tidak valid. Pilih cadangan JSON dari Your Book.')}} 
+renderAll();
+</script>
+</body>
+</html>
